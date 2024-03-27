@@ -131,7 +131,7 @@ class flingtrainer:
                 file_date = row.select_one('td.attachment-date').text.strip()
                 file_size = row.select_one('td.attachment-size').text.strip()
                 download_count = row.select_one('td.attachment-downloads').text.strip()
-                file_url = row.select_one('td.attachment-title a')['href']  # 提取地址
+                file_url = row.select_one('td.attachment-title a')['href']
                 results.append({
                     'File Name': file_name,
                     'Date': file_date,
@@ -207,7 +207,6 @@ class flingtrainer:
             print(f"Request failed: {e}")
             return False
 
-# 示例用法
 if __name__ == '__main__':
     print(logo)
     flingtrainer().run()
